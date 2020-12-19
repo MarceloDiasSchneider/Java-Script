@@ -40,7 +40,8 @@ function carregar(){
     
     imagem.style.marginTop = '5px' 
     imagem.style.marginBottom = 'auto' 
-       
+    
+    /*
     if (letras == 'T' || letras == 'MTTM'){
         imagem.style.transform = 'rotate(180deg)'
     } else if(letras == 'MJTM' || letras == 'TTM' || letras == 'TJTM' || letras == 'MJ'){
@@ -50,4 +51,5 @@ function carregar(){
     } else {
         imagem.style.transform = 'rotate(0deg)'
     }
+    */
 }
