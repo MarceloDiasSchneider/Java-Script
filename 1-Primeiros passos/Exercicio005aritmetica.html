@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <script>
+    document.write(`***** Vamos ver agora operadores aritmeticos *****<br>`)
+    var aritmertica = window.prompt("Escolha uma variavel para aritmetica.")
+    document.write(`Este é o valor da variavel sua variavel: ${aritmertica}<br>`)
+    aritmertica++
+    document.write(`Este é o valor da variavel após utilização do operador ++: ${aritmertica}<br>`)
+    aritmertica--
+    document.write(`Este é o valor da variavel após utilização do operador --: ${aritmertica}<br>`)
+    aritmertica += 5
+    document.write(`Este é o valor da variavel após utilização do operador += 5: ${aritmertica}<br>`)
+    aritmertica -= 3
+    document.write(`Este é o valor da variavel após utilização do operador -= 3: ${aritmertica}<br>`)
+    aritmertica *= 2
+    document.write(`Este é o valor da variavel após utilização do operador *= 2: ${aritmertica}<br>`)
+    aritmertica /= 2
+    document.write(`Este é o valor da variavel após utilização do operador /= 2: ${aritmertica}<br>`)
+    aritmertica %= 2
+    document.write(`Este é o valor da variavel após utilização do operador "Resto da divisão" %= 2: ${aritmertica}<br>`)
+    aritmertica ** 2
+    document.write(`Este é o valor da variavel após utilização do operador "Exponenciação" **= 2: ${aritmertica}<br><br>`)
+    document.write(`***** Vamos ver agora operadores Logicos *****<br>`)
+    var n1 = window.prompt('Escolha mais três números.  1 de 3')
+    var n2 = window.prompt('Escolha mais três números.  2 de 3')
+    var n3 = window.prompt('Escolha mais três números.  3 de 3')
+    document.write(`Os números escolhidos foram ${n1}, ${n2} e ${n3}<br>`)
+    document.write(`Vamos aos testes:<br>`)
+    teste = n1 == n2
+    document.write(`${n1} == ${n2} | R ${teste}<br>`)
+    teste = n1 >= n2
+    document.write(`${n1} >= ${n3} | R ${teste}<br>`)
+    teste = n3 <= n2
+    document.write(`${n3} <= ${n2} | R ${teste}<br>`)
+    teste = n1 != n3
+    document.write(`${n1} != ${n3} | R ${teste}<br>`)
+    teste = n1 == n2 && n1 == n3
+    document.write(`${n1} == ${n2} && ${n1} == ${n3} | R ${teste}<br>`)
+    teste = n1 == n2 || n1 == n3
+    document.write(`${n1} == ${n2} || ${n1} == ${n3} | R ${teste}<br><br>`)
+    document.write(`***** Vamos ao operador ternario *****<br>`)
+    document.write(`Utilizando os números ${n1}, ${n2} e ${n3} podemos dizer:<br>`)
+    var ternario = n1 == n2?`${n1} é igual a ${n2}.<br>`:`${n1} é diferente de ${n2}.<br>`
+    document.write(ternario)
+    var ternario = n2 == n3?`${n2} é igual a ${n3}.<br>`:`${n2} é diferente de ${n3}.<br>`
+    document.write(ternario)
+    var ternario = n1 == n3?`${n1} é igual a ${n3}.<br>`:`${n1} é diferente de ${n3}.<br>`
+    document.write(ternario)
+    </script>
+</body>
+</html>

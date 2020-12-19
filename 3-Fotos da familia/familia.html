@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos da Familia</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onmouseover="tamanho()" onload="tamanho()">
+    <header>
+        <h1>Fotos da Familia</h1>
+    </header>
+    <section>
+        <div>
+            <input class="check" type="checkbox" onclick="carregar()" id='marcelo' value="1">
+            <label for="marcelo">Marcelo</label>
+            <input class="check" type="checkbox" onclick="carregar()" id="tatielli" value="2">
+            <label for="tatielli">Tatielli</label>
+            <input class="check" type="checkbox" onclick="carregar()" id="joshua" value="3">
+            <label for="joshua">Joshua</label>
+            <input class="check" type="checkbox" onclick="carregar()" id="tobyMaicon" value="4">
+            <label for="tobyMaicon">Toby Maicon</label>
+        </div>
+        <div>
+            <section id="section">
+                <p id="tamanho">Escolha quem deve aparecer nas fotos</p>
+                <img src="imagem/001.JPG" id="imagem" alt="Fotos da Familia">
+            </section>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Marcelo Dias Schneider</p>
+    </footer>
+    <script src="scrip.js"></script>
+</body>
+</html>

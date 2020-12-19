@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Qual é seu nome?")
+        document.write(`<strong>${nome}</strong>, Seu nome tem ${nome.length} letras!<br>`)
+        document.write(`Este é seu nome em letras maiuscluas: ${nome.toUpperCase()}<br>`)
+        document.write(`Este é seu nome em letras minusculas: ${nome.toLowerCase()}<br>`)
+        var idade = window.prompt("Qual a sua idade?")
+        document.write(`Nossa, você já tem ${Number.parseInt(idade)} anos!!`)
+        var salario = window.prompt(`Qual seu salario mensal?`)
+        //salario = salario.toFixed(2)
+        document.write(`Nossa seu sálario é de R$ ${salario} mensais`)        
+    </script>
+</body>
+</html>

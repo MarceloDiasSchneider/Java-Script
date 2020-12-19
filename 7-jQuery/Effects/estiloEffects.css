@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    position: relative;
+    border: none;
+    width: 12.5%;
+    height: 60px;
+    line-height: 100%;
+    margin-top: 0;
+    margin-bottom: -4px;
+    text-align: center;
+    word-wrap: break-word;
+}
+#btn1{
+    background-color: rgb(243, 67, 3);
+}
+#btn2{
+    background-color: rgb(80, 135, 255);
+}
+#btn3{
+    background-color: rgb(11, 172, 51);
+}
+#btn4{
+    background-color: rgb(255, 140, 0);
+}
+#btn5{
+    background-color: rgb(255, 20, 147);
+}
+#btn6{
+    background-color: rgb(0, 250, 154);
+}
+#btn7{
+    background-color: rgb(17, 173, 194);
+}
+#btn8{
+    background-color: rgb(245, 241, 0);
+}
+.div1{
+    background-color: royalblue;
+    height: 30%;
+    width: 100%;
+}
+.div2{
+    background-color: goldenrod ;
+    height: 30%;
+    width: 100%;
+}
+.div3{
+    background-color: chocolate;
+    height: 30%;
+    width: 100%;
+}

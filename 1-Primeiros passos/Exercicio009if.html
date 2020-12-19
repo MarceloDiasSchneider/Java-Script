@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo fi em JS</title>
+    <style>
+        body {
+            background: chocolate;
+            text-align: center;
+            font-family: fantasy;
+        }
+        .box{
+            width: 50px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema do Detran</h1>
+    Informe a sua velocidade:
+    <input type="number" class="box" name="vel" id='vel'>
+    <input type="button" value="Informar" onclick="verificar()" >
+    <div id='res'>
+
+    </div>
+    <script>
+        function verificar(){
+            var vel = document.querySelector('input#vel')
+            vel = Number(vel.value)
+            var res = document.querySelector('div#res')
+            res.style.background = 'red'
+            res.style.width = '50%'
+            res.style.marginLeft = '25%' 
+            res.style.marginTop = '15px' 
+            res.innerHTML = `<p>Esta é sua velocidade: <strong>${vel}</strong> K/h<p>`   
+            if (vel > 60) {
+                res.innerHTML += `<p>Você foi <strong>multado </strong> por excesso de velocidade</p>`   
+            }
+            res.innerHTML += `<p>Dirija sempre com o sinto de segurança</p>`   
+        }
+    </script>
+</body>
+</html>

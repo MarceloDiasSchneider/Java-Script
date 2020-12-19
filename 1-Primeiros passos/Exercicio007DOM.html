@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .area {
+            padding: 3px;
+            margin-top: 50px;
+            margin-left: 10%;
+            background-color: green;
+            color: blanchedalmond;
+            width: 80%;
+            height: 250px;
+            line-height: 250px;
+            font-size: 35px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id='a1' class='area' onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+        Escolha um e click.
+    </div>
+    <div id='a2' class="area" >
+        Escolha um e click.
+    </div>
+    <script>
+        var namedoelemento = window.prompt('Qual é seu nome?')
+        function clicar(){
+            var area = document.getElementById('a1')
+            area.innerText = 'O Marcelo é muito inteligente!!'
+            area.style.background = 'red'
+            area.style.color = 'black'
+            area.style.fontWeight = 'bold'
+            area.style.fontSize = '25px'
+        }
+        function entrou(){
+            var area = document.getElementById('a1')
+            area.innerText = 'Voce esta perto, Vai Click agora!!'
+            area.style.background = 'orange'
+            area.style.color = 'black'
+            area.style.fontSize = '25px'
+            area.style.lineHeight = '125px'
+        }
+        function saiu(){
+            var area = document.getElementById('a1')
+            area.innerText = 'Escolha um e click.'
+            area.style.background = 'green'
+            area.style.color = 'blanchedalmond'
+            area.style.fontSize = '35px'
+            area.style.fontWeight = 'normal'
+            area.style.lineHeight = '250px'
+        }
+        var area2 = document.getElementById('a2')
+        area2.addEventListener('click', clicou2)
+        area2.addEventListener('mouseenter', entrou2)
+        area2.addEventListener('mouseout', saiu2)
+        function clicou2(){
+            area2.innerText = 'O '+namedoelemento+' é Gay, Dura realidade!!'
+            area2.style.background = 'red'
+            area2.style.color = 'black'
+            area2.style.fontWeight = 'bold'
+            area2.style.fontSize = '25px'
+            area2.style.lineHeight = '125px'
+        }
+        function entrou2(){
+            area2.innerText = 'Voce esta perto, Vai Click agora!!'
+            area2.style.background = 'orange'
+            area2.style.color = 'black'
+            area2.style.fontSize = '25px'
+        }
+        function saiu2(){
+            area2.innerText = 'Escolha um e click.'
+            area2.style.background = 'green'
+            area2.style.color = 'blanchedalmond'
+            area2.style.fontSize = '35px'
+            area2.style.fontWeight = 'normal'
+            area2.style.lineHeight = '250px'
+        }
+        
+    </script>
+</body>
+</html>

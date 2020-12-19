@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+        }
+        .body {
+            margin-top: 10px;
+            background-color: orange;
+            margin-left: 0%;
+            margin-right: 0%;
+            width: auto;
+            font-family: fantasy;
+            box-shadow: 0px 0px 10px 10px rgba(47, 0, 255, 0.308);
+            height: auto;
+            padding: 1%;
+            border: 0px solid silver;
+            border-radius: 10px;
+        }
+        .mae {
+            margin: 5px;
+            background-color: blue;
+            padding: 3%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.486);
+        }
+        input {
+            border: 1px solid silver;
+            border-radius: 10px;
+            padding: 5px;
+
+        }
+        p {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="nome" name="nome" placeholder="Qual seu nome?">
+    <!-- <input type="button" id="confirma" onclick="nome()" value="Confirma"> -->
+    <div class='mae' id="mae">
+        <div class='body' id="saudacao">
+            <p>Seja bem vindo!</p>
+        </div>
+        <div class='body' id='hora'>
+            <p>Hora</p>
+        </div>
+        <div class='body' id='d_semana'>
+            <p>Dia da semaa </p>
+        </div>
+        <div class="body" id='mes'>
+            <p>Mês</p>
+        </div>
+        <div class="body" id='ano'>
+            <p>Ano</p>
+        </div>
+    </div>
+    <script>
+        var data = new Date()
+        document.getElementById('saudacao').addEventListener('mouseenter', saudacaoIn)
+        function saudacaoIn(){
+            
+            var nome = document.getElementById('nome').value
+            var pSaudacao = document.getElementsByTagName('p')[0]
+            var mHora = data.getHours()
+            if (mHora >= 19 || mHora < 5){
+                var msg = 'Boa noite '
+            } else if (mHora >= 5 && mHora < 13){
+                var msg = 'Bom dia '
+            } else if (mHora >= 13 && mHora < 19){
+                var msg = 'Boa tarde '
+            }
+            pSaudacao.innerHTML = `${msg} ${nome}`
+        }
+
+        document.getElementById('hora').addEventListener('mouseenter', horaIn)
+        function horaIn(){
+            var horas = new Date().getHours()
+            var minutos = new Date().getMinutes()
+            var segundos = new Date().getSeconds() //sem uso
+            
+            var pHora = document.getElementsByTagName('p')[1]
+            pHora.innerHTML = `Agora são: ${horas}:${minutos}`
+        }
+
+        document.getElementById('d_semana').addEventListener('mouseenter', diaIn)
+        function diaIn(){
+            var diaDaSemana = data.getDay()
+            var diaDoMes = data.getDate()
+            switch (diaDaSemana) {
+                case 0:
+                    diaDaSemana = "Domingo"
+                    break
+                case 1:
+                    diaDaSemana = "Segunda-Feira"
+                    break
+                case 2:
+                    diaDaSemana = "Terça-Feira"
+                    break
+                case 3:
+                    diaDaSemana = "Quarta-Feira"
+                    break
+                case 4:
+                    diaDaSemana = "Quinta-Feira"
+                    break
+                case 5:
+                    diaDaSemana = "Sexta-Feira"
+                    break
+                case 6:
+                    diaDaSemana = "Sabado"
+                    break    
+            }
+            var pDia_Semana = document.getElementsByTagName('p')[2]
+            pDia_Semana.innerHTML = `Hoje é dia ${diaDoMes}, ${diaDaSemana}`
+        }
+        
+        document.getElementById('mes').addEventListener('mouseenter', mes)
+        function mes(){
+            var mes = data.getMonth()
+            switch (mes){
+                case 0: 
+                    mes = 'Janeiro' 
+                    break
+                case 1:
+                    mes = 'Fevereiro'
+                    break
+                case 2:
+                    mes = 'Março'
+                    break
+                case 3:
+                    mes = 'Abril'    
+                    break
+                case 4:
+                    mes = 'Maio'
+                    break
+                case 5:
+                    mes = 'Junho'    
+                    break
+                case 6:
+                    mes = 'Julho'    
+                    break
+                case 7:
+                    mes = 'Agosto'    
+                    break
+                case 8:
+                    mes = 'Setembro'    
+                    break
+                case 9:
+                    mes = 'Outubro'    
+                    break
+                case 10:
+                    mes = 'Novembro'    
+                    break
+                case 11:
+                    mes = 'Dezembro'    
+                    break
+            }
+            var pMes = document.getElementsByTagName('p')[3]
+            pMes.innerHTML = `Estamos no mês de ${mes}`
+        }
+        document.getElementById('ano').addEventListener('mouseenter', ano)
+        function ano(){
+            var ano = data.getFullYear()
+            var pAno = document.getElementsByTagName('p')[4]
+            pAno.innerHTML = `Já estamos no ano de ${ano}`
+        }
+
+        document.getElementById('mae').addEventListener('click', limpa)
+        function limpa(){
+            var ls = document.getElementsByTagName('p')[0]
+            var lh = document.getElementsByTagName('p')[1]
+            var ld = document.getElementsByTagName('p')[2]
+            var lm = document.getElementsByTagName('p')[3]
+            var la = document.getElementsByTagName('p')[4]
+            ls.innerHTML = 'Seja bem vindo!!!'
+            lh.innerHTML = 'Hora'
+            ld.innerHTML = 'Dia do mes e da semana'
+            lm.innerHTML = 'Mês'
+            la.innerHTML = 'Ano'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo DOM</title>
+    <style>
+        body {
+            margin: 10%;
+            background-color: cornflowerblue;
+            color: white;
+        }
+        h1 {
+            font-size: 15px;
+        }
+        #msg {
+            width: 40%;
+            margin-left: 10%;
+        }
+        .msg{
+            width:  40%;
+            margin-left: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendento Document Object Model "DOM"</h1>
+    <p>Vamos aprender muita coisa!!!</p>
+    <p>Aqui vai o resultado</p>
+    <div id='msg'><p>Click em mim.</p></div>
+    <div class='msg'><p>Click em mim.</p></div>
+    <script>
+        window.document.write(window.document.charset + '<br>')
+        window.document.write(window.navigator.appName + '<br>')
+        window.document.write(window.document.URL + '<br>')
+        var corpo = window.document.body
+        corpo.style.background = 'red'
+        
+        var p = window.document.getElementsByTagName('p')[0]
+        window.document.write(p.innerText)
+        p.style.color = 'silver'
+        
+        var idmsg = window.document.getElementById('msg')
+        idmsg.style.background = 'silver'
+        idmsg.style.color = 'black'
+        idmsg.innerText = 'Não vai clicar??'
+        
+        var classmsg = document.getElementsByClassName('msg')[0]
+        classmsg.style.color = 'black'
+        classmsg.style.background = 'orange'
+        classmsg.innerHTML = '<p>Clica logo!!!</p>'
+    </script>
+</body>
+</html>

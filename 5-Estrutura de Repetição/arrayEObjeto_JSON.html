@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Ola Mundo</p>
+    <input type="button" onclick="alterar()" value="alterar">
+</body>
+<script>
+    
+    // declara um novo array
+    let array = []
+    // declara um novo objeto com informações
+    let informações = {'nome': 'marcelo', 'idade': 28, 'cidade': 'gramado'}
+    // array criado recebe o objeto criado
+    array.push(informações)
+    
+    // altera o conteudo de p[0] com a informação do array
+    function alterar() {
+        alert('oi')
+        document.getElementsByTagName('p')[0].innerHTML = array[0].idade
+    }
+</script>
+</html>

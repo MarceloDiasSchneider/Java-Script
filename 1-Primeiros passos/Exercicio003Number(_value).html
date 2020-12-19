@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World!!</title>
+    <style>
+        body{
+            background-color: silver;
+            color: rgb(58, 34, 34);
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá mundo</h1>
+    <p>Existe uma lenda, que diz, para aprender um linguagem de programação é 
+        funfamental que se diga "Olá mundo" para não ser amaldiçoado e assim 
+        pode aprender a linguagem de programção</p>
+    <p>Meu nome é Marcelo.</p>  
+    <script>
+        //Apendendo java script
+        var n1 = Number.parseFloat(window.prompt('Digite um numero.'))
+        var n2 = Number.parseFloat(window.prompt('Didite outro numero.')) 
+        var r1 = n1 + n2
+        window.alert(`A soma ente ${n1} e ${n2} é igual a ${r1}`)
+        document.querySelector('p').innerHTML += `<p>A soma ente ${n1} e ${n2} é igual a ${r1}</p>`
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Do Guanabara!</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Exercico do Guanabara</h1>
+    </header>
+    <section>
+        <div>
+            <p>Informe valores entre 1 e 100:</p>
+            <input class='menosEMais' type="button" value="-" onclick="menos()">
+            <input type="number" id="numeros" name="numeros">
+            <input class='menosEMais' type="button" value="+" onclick="mais()">
+            <input class='btnSortear' type="button" value="Sortear" onclick="sortear()">
+            <input type="button" value="Adicionar" onclick="valinf()">
+        </div>
+        <div id='resultado'>
+            <h1 id="txt">Aguardando valores</h1>
+        </div>
+        <div id="verArray">
+            <input type="button" value="Ver array" onclick='verArray()'>
+        </div>
+        
+    </section>
+    <footer>
+        <p>&copy;Marcelo Dias Schneider</p>
+    </footer>
+    <script src="scrip.js"></script>
+</body>
+</html>
