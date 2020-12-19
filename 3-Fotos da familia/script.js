@@ -36,7 +36,7 @@ function carregar(){
     document.getElementById('tamanho').innerHTML = `Fotos de : ${nomes}`
     
     var imagem = document.getElementById('imagem')
-    imagem.src = `imagem/${letras}001.jpg`
+    imagem.src = `Imagem/${letras}001.jpg`
     
     imagem.style.marginTop = '5px' 
     imagem.style.marginBottom = 'auto' 
