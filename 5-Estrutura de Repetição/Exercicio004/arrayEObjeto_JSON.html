@@ -6,22 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Ola Mundo</p>
+    <p>Click no botão abaixo para ver seus dados inseridos</p>
     <input type="button" onclick="alterar()" value="alterar">
 </body>
 <script>
-    
+    let nome = prompt("Qual seu nome?")
+    let idade = prompt("Quantos anos tem?")
+    let cidade = prompt("Qual a cidade que você nasceu?")
     // declara um novo array
     let array = []
     // declara um novo objeto com informações
-    let informações = {'nome': 'marcelo', 'idade': 28, 'cidade': 'gramado'}
+    let informações = {'nome': nome, 'idade': idade, 'cidade': cidade}
     // array criado recebe o objeto criado
     array.push(informações)
     
     // altera o conteudo de p[0] com a informação do array
     function alterar() {
-        alert('oi')
-        document.getElementsByTagName('p')[0].innerHTML = array[0].idade
+        document.getElementsByTagName('p')[0].innerHTML = array[0].idade +" "+ array[0].nome +" "+ array[0].cidade
+        alert(informações.nome)
+        alert(informações.idade)
+        alert(informações.cidade)
     }
 </script>
 </html>
